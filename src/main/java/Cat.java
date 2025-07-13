@@ -7,11 +7,11 @@ public class Cat {
         this.name = name;
     }
 
-    @VeryImportant
+    @RunImmediately
     public void meow() {
         System.out.println("Meow!");
     }
-    
+
     public void eat(){
         System.out.println("Munch!");
     }
