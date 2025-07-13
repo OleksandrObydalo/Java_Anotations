@@ -12,6 +12,7 @@ public class Cat {
         System.out.println("Meow!");
     }
 
+    @RunImmediately()
     public void eat(){
         System.out.println("Munch!");
     }
