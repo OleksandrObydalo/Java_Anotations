@@ -1,5 +1,6 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Field;
 
 public class CreatingAnnotations {
     public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
@@ -27,7 +28,15 @@ public class CreatingAnnotations {
                     method.invoke(cat);
                 }
             }
+        }
 
+        for(Field field : cat.getClass().getDeclaredFields()){
+            if(field.isAnnotationPresent(ImportantString.class)){
+                Object object = field.get(cat);
+                if(object instanceof String stringValue){
+                    System.out.println(stringValue.toUpperCase());
+                }
+            }
         }
 
     }

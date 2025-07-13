@@ -1,5 +1,6 @@
 @VeryImportant
 public class Cat {
+    @ImportantString
     String name;
     int age;
 
