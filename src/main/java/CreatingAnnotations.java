@@ -21,7 +21,11 @@ public class CreatingAnnotations {
 
         for(Method method : cat.getClass().getDeclaredMethods()){
             if(method.isAnnotationPresent(RunImmediately.class)){
-                method.invoke(cat);
+                RunImmediately annotation = method.getAnnotation(RunImmediately.class);
+                for(int i = 0; i < annotation.times(); i++){
+                    System.out.println("Call method for " + (i + 1) + " time");
+                    method.invoke(cat);
+                }
             }
 
         }
