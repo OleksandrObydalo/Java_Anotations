@@ -1,3 +1,4 @@
+@VeryImportant
 public class Cat {
     String name;
     int age;
@@ -6,10 +7,11 @@ public class Cat {
         this.name = name;
     }
 
+    @VeryImportant
     public void meow() {
         System.out.println("Meow!");
     }
-
+    
     public void eat(){
         System.out.println("Munch!");
     }
